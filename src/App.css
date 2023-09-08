@@ -3,10 +3,32 @@
   color: #000;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: #5dacdc !important;
+  font-size: 36px !important;
+  z-index: 100 !important;
+}
 
+.slick-prev {
+  left: -45px !important;
+}
 
-.slick-prev:before, .slick-next:before {
+.slick-dots {
+  bottom: -100px !important;
+}
 
-  color: #333 !important;
- 
+.slick-dots li button:before {
+  font-size: 16px !important;
+}
+.slick-dots li button:before {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #5dacdc !important;
+  width: 40px !important;
+  height: 40px !important;
 }

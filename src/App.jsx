@@ -1,5 +1,6 @@
 import "./App.css";
- import Header from "./component/Header";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
 import Home from "./page/Home";
 import ScrollToTop from "./component/ScrollToTop";
 import Tintuc from "./page/tintuc";
@@ -11,9 +12,7 @@ import {
 } from "react-router-dom";
 import Detail from "./page/Detail";
 
-
 function App() {
-
   return (
     <BrowserRouter>
       <Header />
@@ -22,8 +21,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/tintuc" element={<Tintuc />} />
         <Route path="/detail/:id" element={<Detail />} />
-
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

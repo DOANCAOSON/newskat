@@ -10,14 +10,17 @@ const Detail = () => {
   useEffect(() => {
     // Gửi yêu cầu API và cập nhật trạng thái khi nhận được dữ liệu
     axios
-      .get(`https://admin.channelcharn.us/api/post-detail?id=${id}`)
+      .get(
+        `https://admin.channelcharn.us/api/post-detail?id=${id}`
+      )
       .then((response) => {
         setResponseData(response.data.data);
+        console.log(response);
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
       });
-  },[]);
+  }, []);
 
   console.log(responseData);
 
@@ -25,7 +28,9 @@ const Detail = () => {
     <div className="w-[1200px] flex mx-[auto] gap-[30px]">
       <a>
         <div className="h-[60px]">
-          <div className="line-clamp-2">{responseData?.data?.name}</div>
+          <div className="line-clamp-2">
+            {responseData?.data?.name}
+          </div>
         </div>
         <div className="rounded-lg overflow-hidden">
           <img

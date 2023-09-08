@@ -13,9 +13,12 @@ export default {
         "themtest": "#F4F4F4",
         "footer": "#575757",
         "color": "#FFFFFF",
-        "footer-them": "#969696",
+        "footer-them": "#969696", 
         "colorBlack": "#000",
         "backgroundopacity": "rgba(0,0,0,0.5)",
+        "backgroundopacityslider": "rgba(0,0,0,0.2)",
+        "btn": "#5dacdc",
+        "btnhover": "#EE0000",
         "backgroundopacitywhite": "rgba(255,255,255,0.5)"
 
       },

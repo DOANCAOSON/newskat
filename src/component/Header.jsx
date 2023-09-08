@@ -10,7 +10,9 @@ const Header = () => {
 
   useEffect(() => {
     axios
-      .get("https://admin.channelcharn.us/api/list-categories")
+      .get(
+        "https://admin.channelcharn.us/api/list-categories"
+      )
       .then((response) => {
         setCategories(response.data.data.data);
       })
@@ -20,7 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className=" w-[100%] h-[auto]">
+    <div className="  fixed  top-0 left-0 right-0 z-[1000] w-[100%] h-[auto]">
       {/*  fixed  top-0 left-0 right-0 */}
       <div className="m-[auto] p-[6px] bg-[#003991]">
         <div className="flex items-center gap-[44px] p-[5px] text-center w-[1200px] m-auto ">
@@ -47,7 +49,7 @@ const Header = () => {
       </div>
       <div className="w-[100%] bg-[#fff] pb-[10px]">
         <div className="shadow-boxshadowbottom py-[4px] ">
-          <div className="flex items-center  text-center w-[1800px] pt-[12px] m-auto text-[#333333] ">
+          <div className="flex items-center  text-center w-[1200px] pt-[12px] m-auto text-[#333333] ">
             <div className="flex justify-center w-[10%] ">
               <Link to="/">
                 <div className="w-[40px] h-[40px] rounded-full ">
