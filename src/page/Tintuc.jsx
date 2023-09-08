@@ -1,7 +1,5 @@
 const Tintuc = () => {
-  return (
-    <div>tintuc</div>
-  )
-}
+  return <div>tintuc</div>;
+};
 
-export default Tintuc
+export default Tintuc;

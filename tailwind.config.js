@@ -13,17 +13,19 @@ export default {
         "themtest": "#F4F4F4",
         "footer": "#575757",
         "color": "#FFFFFF",
-        "footer-them": "#969696", 
+        "footer-them": "#969696",
         "colorBlack": "#000",
-        "backgroundopacity": "rgba(0,0,0,0.5)",
-        "backgroundopacityslider": "rgba(0,0,0,0.2)",
+        "backgroundopacity": "rgba(255,255,255,0.4)",
+        "backgroundopacityslider": "rgba(0,0,0,0.1)",
         "btn": "#5dacdc",
         "btnhover": "#EE0000",
-        "backgroundopacitywhite": "rgba(255,255,255,0.5)"
+        "backgroundopacitywhite": "rgba(255,255,255,0.5)",
+        "headerbackgrou": "#232536",
+        "bgwhite": "#FFFFFF"
 
-      },
-      rotate: {
-        'r5': '-5deg',
+
+
+
       },
       boxShadow: {
         'boxshadowbottom': '0px 4px 8px rgba(0, 0, 0, 0.2)',
