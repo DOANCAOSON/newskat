@@ -21,18 +21,33 @@ const Header = () => {
 
   return (
     <div className=" w-[100%] h-[auto]">
-      {/* fixed top-0 left-0 right-0 z-[1000] */}
       <div className="w-[100%] bg-headerbackgrou py-4">
         <div className="">
-          <div className="flex items-center  text-center justify-between w-[1200px] pt-[12px] m-auto text-[#333333] ">
-            <div className="flex justify-center w-[10%] ">
+          <div className="flex items-center  text-center justify-between w-[100%] md:w-[100%] lg:w-[1200px]  pt-[12px] m-auto text-[#333333] ">
+            <div className="flex justify-center w-[100%] md:w-[100%] lg:w-[10%]">
               <Link to="/">
-                <div className="w-[100%] h-[100%] rounded-full ">
-                  <img src={logo} alt={logo} />
+                <div className="w-[100%] h-[100%] rounded-full text-[32px] text-color text-center ">
+                  {/* <img src={logo} alt={logo} /> */}
+                  UsExpress
+                  <div>
+                    <div className="mt-[20px] items-center grid grid-cols-2 md:grid-cols-4 lg:hidden  justify-end gap-[80px] text-[18px] font-medium  text-color ">
+                      {categories.map((category) => (
+                        <Link
+                          key={category.id}
+                          to="/tintuc"
+                        >
+                          {category.name}
+                        </Link>
+                      ))}
+                      <div className="rounded-lg bg-bgwhite text-colorBlack">
+                        Subscribe
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Link>
             </div>
-            <div className="flex items-center  justify-end gap-[80px] text-[18px] font-medium  text-color ">
+            <div className="items-center hidden  md:hidden lg:flex  justify-end gap-[80px] text-[18px] font-medium  text-color ">
               {categories.map((category) => (
                 <Link key={category.id} to="/tintuc">
                   {category.name}

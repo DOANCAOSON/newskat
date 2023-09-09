@@ -21,24 +21,23 @@ const Detail = () => {
         console.error("Error fetching data: ", error);
       });
   }, []);
-
-  console.log(responseData);
+  const htmlString = responseData?.data?.content;
 
   return (
-    <div className="w-[1200px] flex mx-[auto] gap-[30px]">
-      <a>
-        <div className="h-[60px]">
-          <div className="line-clamp-2">
+    <div className="w-[100%] sm:w-[600px] lg:w-[600px] flex mt-[100px] mx-[auto] gap-[30px]">
+      <div>
+        <div className="">
+          <h1 className="text-[32px]">
             {responseData?.data?.name}
-          </div>
+          </h1>
         </div>
-        <div className="rounded-lg overflow-hidden">
-          <img
-            src={`https://admin.channelcharn.us/public/upload/articles/${responseData?.data?.picture}`}
-            alt={responseData?.data?.picture}
-          />
+        <div className="flex w-[100%]">
+          <div
+            dangerouslySetInnerHTML={{ __html: htmlString }}
+            className="mt-[140px]"
+          ></div>
         </div>
-      </a>
+      </div>
     </div>
   );
 };

@@ -20,8 +20,6 @@ const Sliders = () => {
       });
   }, []);
 
-  // console.log(responseData);
-
   const settings = {
     dots: true,
     infinite: true,
@@ -34,8 +32,11 @@ const Sliders = () => {
   };
 
   return (
-    <div className="w-[1200px] mx-auto mb-[100px] mt-[50px]">
-      <Slider {...settings}>
+    <div className="w-[100%] md:w-[100%] lg:w-[1200px] mx-auto mb-[100px] mt-[50px]">
+      <Slider
+        className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 rounded-lg"
+        {...settings}
+      >
         {responseData?.map((item) => (
           <div className="relative h-[600px]" key={item.id}>
             <div
@@ -48,16 +49,16 @@ const Sliders = () => {
             <div className="absolute z-3 top-[50%] left-[5%] translate-x-[5%] translate-y-[-50%] flex items-center justify-left py-[20px] rounded-lg  w-[80%] text-colorBlack">
               <div>
                 <div className="mb-[40px]">
-                  <h1 className="text-left text-5xl line-clamp-3 w-[450px] text-color ">
+                  <h1 className="text-left text-5xl line-clamp-3 w-[100%] md:-[300px] lg:w-[450px]   text-color ">
                     {item.name}
                   </h1>
                 </div>
                 <div className="mb-[20px]">
-                  <p className="text-left line-clamp-2  w-[450px] text-base  text-color">
+                  <p className="text-left line-clamp-2  w-[100%] md:-[300px] lg:w-[450px] text-base  text-color">
                     {item.info}
                   </p>
                 </div>
-                <div className="w-[140px]">
+                <div className="w-[100%] md:w-[160px] lg:w-[160px]">
                   <Link
                     // to={`/detail/${item.id}`}
                     to={`#`}
