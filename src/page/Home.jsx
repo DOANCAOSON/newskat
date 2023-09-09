@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import Sliders from "../component/Sliders";
+import Pagination from "../component/Pagination";
 import { FiArrowRight } from "react-icons/fi";
 
 const Home = () => {
@@ -69,6 +70,10 @@ const Home = () => {
               </Link>
             ))}
           </div>
+        </div>
+
+        <div className="w-[1200px] flex mx-[auto]   ">
+          <Pagination/>
         </div>
       </div>
     </>
