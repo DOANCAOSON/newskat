@@ -34,10 +34,10 @@ const Sliders = () => {
   };
 
   return (
-    <div className="mb-[200px]">
+    <div className="w-[1200px] mx-auto mb-[100px] mt-[50px]">
       <Slider {...settings}>
         {responseData?.map((item) => (
-          <div className="relative  h-[90vh]" key={item.id}>
+          <div className="relative h-[600px]" key={item.id}>
             <div
               style={{
                 backgroundImage: `url(https://admin.channelcharn.us/${item.url_img})`,
