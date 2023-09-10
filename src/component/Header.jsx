@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="w-[100%] h-[100%] rounded-full text-[32px] text-color text-center ">
                   <Link to='/'>UsExpress</Link>
                   <div>
-                    <div className="mt-[20px] items-center grid grid-cols-2 md:grid-cols-4 lg:hidden  justify-end gap-[80px] text-[18px] font-medium   ">
+                    <div className="mt-[20px] items-center grid grid-cols-2 md:grid-cols-4 lg:hidden  justify-end  gap-x-[50px] gap-y-[40px] sm:gap-[80px]  lg:gap-[80px] text-[18px] font-medium   ">
                       {categories.map((category) => (
                         <Link
                           key={category.id}
