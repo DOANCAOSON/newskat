@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Hotnews from "../component/Hotnews";
 
 const Detail = () => {
   const [responseData, setResponseData] = useState([]);
@@ -22,7 +23,7 @@ const Detail = () => {
       .catch((error) => {
         console.error("Error fetching data: ", error);
       });
-  }, []);
+  }, [id]);
 
   const htmlString = responseData?.data?.content;
 
@@ -52,6 +53,10 @@ const Detail = () => {
             dangerouslySetInnerHTML={{ __html: htmlString }}
             className="mt-[140px] px-[20px] dangerouslySetInnerHTML"
           ></div>
+        </div>
+
+        <div>
+          <Hotnews/>
         </div>
       </div>
     </div>

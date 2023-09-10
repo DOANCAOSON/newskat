@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
     <div className="flex justify-center bg-[#000] mt-[200px] text-text-#0000">
-      <div className="w-[1200px] flex mx-[auto]   ">
+      <div className="w-[100%] sm:w-[100%] lg:w-[1200px] flex mx-[auto]   ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px] rounded-lg p-[40px] ">
-          <div className="text-left text-[#fff]">
+          <div className=" text-[#fff]">
             <div className="mb-[10px] text-[22px] font-normal ">
               Address
             </div>

@@ -31,22 +31,16 @@ const ScrollToTop = () => {
 
   return (
     <div
-      style={{
-        position: "fixed",
-        bottom: 100,
-        right: 100,
-        zIndex: 1000,
-      }}
       className={`scroll-to-top ${
-        isVisible ? "" : "hidden"
-      }`}
+        isVisible ? "" : "hidden" 
+      } fixed bottom-10 right-2 sm:bottom-10  sm:right-5 lg:right-[300px] lg:bottom-[100px] z-[8000]`}
     >
-      <button
+      <div
         onClick={scrollToTop}
-        className="scroll-button bg-backgroundopacityTOP"
+        className="scroll-button bg-backgroundopacityTOP  rounded-lg "
       >
-        <BiChevronUp className="text-[32px]" />
-      </button>
+        <BiChevronUp className="text-[32px] text-color" />
+      </div>
     </div>
   );
 };
