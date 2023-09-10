@@ -52,7 +52,7 @@ const Tintuc = () => {
           </h1>
         </div>
 
-        <div className="w-[1200px] flex mx-[auto]   ">
+        <div className="w-[100%] sm:w-[100%] lg:w-[1200px]  flex mx-[auto]   ">
           <div
             style={{
               transform: isInView ? "none" : "translateY(100%)",
@@ -62,7 +62,7 @@ const Tintuc = () => {
             className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-[50px] rounded-lg p-[40px] bg-[#eee]">
             {responseData.data?.map((item) => (
               <Link
-                className="hoverbgscale w-[40%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 "
+                className="hoverbgscale w-[100%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 "
                 to={`/detail/${item.id}`}
                 key={item.id}
               >
@@ -91,7 +91,7 @@ const Tintuc = () => {
             ))}
           </div>
         </div>
-        <div className="w-[1200px] flex justify-center mx-[auto] mt-[20px]">
+        <div className="w-[100%] sm:w-[100%]  lg:w-[1200px] flex justify-center mx-[auto] mt-[20px]">
           <div>
             <nav aria-label="Page navigation example">
               <ul className="flex items-center -space-x-px h-10 text-base">
