@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Detail = () => {
   const [responseData, setResponseData] = useState([]);
@@ -26,13 +28,20 @@ const Detail = () => {
 
 
 
- 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
 
 
   return (
-    <div className="w-[100%] lg:w-[1200px] flex justify-center mt-[100px] mx-[auto] gap-[30px]">
-      <div className="w-[100%]">
+    <div ref={ref} className="w-[100%] lg:w-[1200px] flex justify-center mt-[100px] mx-[auto] gap-[30px]">
+      <div 
+      style={{
+        transform: isInView ? "none" : "translateY(100%)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s ",
+      }}
+      className="w-[100%]">
         <div className="w-[100%] ">
           <h1 className="text-[32px] px-[20px] w-[100%]">
             {responseData?.data?.name}

@@ -43,7 +43,7 @@ const ScrollToTop = () => {
     >
       <button
         onClick={scrollToTop}
-        className="scroll-button bg-backgroundopacity"
+        className="scroll-button bg-backgroundopacityTOP"
       >
         <BiChevronUp className="text-[32px]" />
       </button>

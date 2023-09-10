@@ -4,6 +4,7 @@ import Footer from "./component/Footer";
 import Home from "./page/Home";
 import ScrollToTop from "./component/ScrollToTop";
 import Tintuc from "./page/Tintuc";
+import ScrollYPro from "./component/ScrollYPro";
 
 import {
   BrowserRouter,
@@ -15,6 +16,7 @@ import Detail from "./page/Detail";
 function App() {
   return (
     <BrowserRouter>
+    <ScrollYPro/>
       <Header />
       <ScrollToTop />
       <Routes>

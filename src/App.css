@@ -89,3 +89,25 @@
 .fck_detail p {
   width: 100% !important;
 }
+
+.btnheader:hover {
+  color: #f70909 !important;
+  transition: all 0.3s ease-in;
+}
+.btnheader{
+  position: relative;
+}
+
+.btnheader::after{
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  bottom: 0px;
+}
+
+.btnheader:hover .btnheader::after  {
+  width: 100%;
+  transition: all 0.3s ease-in;
+  background-color: #5dacdc;
+}

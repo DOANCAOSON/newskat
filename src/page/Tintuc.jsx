@@ -4,13 +4,15 @@ import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Sliders from "../component/Sliders";
 import { useParams } from "react-router-dom";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Tintuc = () => {
   const [page, setPage] = useState(1);
 
   const [responseData, setResponseData] = useState([]);
 
-  const { sort , name} = useParams();
+  const { sort, name } = useParams();
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= responseData?.last_page) {
@@ -32,19 +34,32 @@ const Tintuc = () => {
       });
   }, [page, sort]);
 
- 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+
   return (
     <div>
-      <div className="w-[100%]">
+      <div ref={ref} className="w-[100%]">
         <Sliders />
         <div className=" w-[100%] items-center flex justify-center mx-[auto] mb-[60px]">
-          <h1 className="text-[36px] relative layoutcontent text-center">
-           Danh sách  {name}
+          <h1 style={{
+            transform: isInView ? "none" : "translateY(-100%)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s ",
+          }} className="text-[36px] relative layoutcontent text-center">
+            Danh sách  {name}
           </h1>
         </div>
 
         <div className="w-[1200px] flex mx-[auto]   ">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-[50px] rounded-lg p-[40px] bg-[#eee]">
+          <div
+            style={{
+              transform: isInView ? "none" : "translateY(100%)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.5s ",
+            }}
+            className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-[50px] rounded-lg p-[40px] bg-[#eee]">
             {responseData.data?.map((item) => (
               <Link
                 className="hoverbgscale w-[40%] md:w-[100%] lg:w-[100%]  bg-[#fff] hover:shadow-2xl  hover:ease-in transition duration-500 "
@@ -102,11 +117,10 @@ const Tintuc = () => {
                 </li>
                 {Array.from({ length: responseData?.last_page }, (_, index) => (
                   <li
-                    className={`${
-                      index + 1 === page
+                    className={`${index + 1 === page
                         ? "z-10 flex items-center justify-center px-4 h-10 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
                         : " flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white "
-                    }`}
+                      }`}
                     key={index}
                     onClick={() => setPage(index + 1)}
                   >

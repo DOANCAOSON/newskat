@@ -17,15 +17,13 @@ export default {
         "colorBlack": "#000",
         "backgroundopacity": "rgba(255,255,255,0.4)",
         "backgroundopacityslider": "rgba(0,0,0,0.1)",
+        "backgroundopacityTOP": "rgba(0,0,0,0.6)",
         "btn": "#5dacdc",
         "btnhover": "#EE0000",
         "backgroundopacitywhite": "rgba(255,255,255,0.5)",
         "headerbackgrou": "#232536",
-        "bgwhite": "#FFFFFF"
-
-
-
-
+        "bgwhite": "#FFFFFF",
+        "texthover": "#f70909"
       },
       boxShadow: {
         'boxshadowbottom': '0px 4px 8px rgba(0, 0, 0, 0.2)',
